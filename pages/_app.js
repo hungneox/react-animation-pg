@@ -1,7 +1,7 @@
 import React from 'react'
 import App from 'next/app'
-import SiteLayout from '../components/SiteLayout'
-import AccountSettingsLayout from '../components/AccountSettingsLayout'
+import SiteLayout from '../components/layouts/SiteLayout'
+import AccountSettingsLayout from '../components/layouts/AccountSettingsLayout'
 import '../css/tailwind.css'
 
 class MyApp extends App {

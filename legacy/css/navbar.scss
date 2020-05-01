@@ -1,0 +1,199 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 72px;
+
+    z-index: 500;
+
+    background-color: $color-background-navbar;
+    border-bottom: solid 1px $color-border-navbar;
+    background-image: url("img/navbar-noise.png");
+
+    padding: 0px 36px;
+
+    & a, span, input, ul, li {
+        font-family: $fonts-ui;
+    }
+
+    a {
+        display: inline-block;
+        height: 28px;
+        line-height: 28px;
+        padding: 0px 12px;
+        margin: 20px 6px;
+
+        background-color: $color-button;
+        color: $color-text;
+        text-decoration: none;
+
+        border: solid 1px $color-border-button;
+        @include border-radius(16px);
+
+        @include transition(0.3s, ease-out);
+
+        &:hover {
+            background-color: $color-button-hover;
+            border: solid 1px $color-border-button-hover;
+            @include transition(0.3s, ease);
+        }
+
+        &:active {
+            background-color: $color-button-active;
+            border: solid 1px $color-border-button-active;
+            @include transition(0.3s, ease-out);
+        }
+    }
+
+    .wrapper-dropdown {
+        position: relative;
+        width: 200px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0px 12px;
+        margin: 20px 6px;
+
+        background-color: $color-button;
+        color: $color-text;
+
+        border: solid 1px $color-border-button;
+        @include border-radius(16px);
+
+        cursor: pointer;
+        outline: none;
+        @include transition(0.3s, ease-out);
+
+        &:after { // small arrow
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -3px;
+            border-width: 6px 6px 0 6px;
+            border-style: solid;
+            border-color: $color-text transparent;
+        }
+
+        &:active {
+            background-color: $color-button-active;
+            border: solid 1px $color-border-button-active;
+            @include transition(0.3s, ease-out);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 28px;
+            left: 0;
+            right: 0;
+            padding: 0;
+
+            background-color: $color-button;
+            color: $color-text;
+
+            border: solid 1px $color-border-button;
+            @include border-radius(8px);
+
+            list-style: none;
+            opacity: 0;
+            pointer-events: none;
+
+            @include transition(0.3s, ease-out);
+        }
+
+        &.active .dropdown {
+            opacity: 1;
+            pointer-events: auto;
+            @include transition(0.3s, ease);
+        }
+
+        .dropdown:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 15px;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: $color-button transparent;
+        }
+
+        .dropdown:before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 13px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: $color-border-button transparent;
+        }
+
+        .dropdown li {
+            display: block;
+            padding: 10px 16px;
+            border-bottom: 1px solid $color-border-button;
+
+            @include transition(0.3s, ease-out);
+        }
+
+        .dropdown li:first-of-type {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .dropdown li:last-of-type {
+            border: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown li:hover {
+            background-color: $color-button-hover;
+            border-color: $color-border-button-hover;
+            @include transition(0.3s, ease);
+        }
+    }
+
+    .wrapper-input {
+        position: relative;
+        margin: 20px 6px;
+        width: 360px;
+
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            color: $color-text;
+
+            width: 100%;
+            padding: 0px 12px;
+            height: 28px;
+
+            background-color: $color-button;
+
+            border: solid 1px $color-border-button;
+            @include border-radius(16px);
+
+            cursor: text;
+            outline: none;
+            @include transition(0.3s, ease-out);
+        }
+
+        input:focus {
+            background-color: $color-button-active;
+            border: solid 1px $color-border-button-active;
+            @include border-radius(16px);
+        }
+
+        .icon {
+            position: absolute;
+            top: 0;
+            right: -12px;
+            height: 28px;
+            line-height: 28px;
+            color: $color-text;
+        }
+    }
+}

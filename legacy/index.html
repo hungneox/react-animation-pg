@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Projects Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar animated fadeInDown">
+            <div class="pure-g">
+
+                <div class="pure-u-1-3">
+
+                <a href="#">log out</a>
+                <a href="#">home</a>
+                <a href="#create">create project</a>
+
+                </div>
+
+                <div class="pure-u-1-3">
+
+                <div class="wrapper-dropdown">
+                <span>category</span>
+                <ul class="dropdown">
+                    <li>virtual</li>
+                    <li>software</li>
+                    <li>social</li>
+                </ul>
+                </div>
+
+                </div>
+
+                <div class="pure-u-1-3">
+
+                <div class="wrapper-input">
+                <input type="text" class="form-control" placeholder="search">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="view" ng-view>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.angularjs.org/1.2.26/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.angularjs.org/1.2.26/angular-animate.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

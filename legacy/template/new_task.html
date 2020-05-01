@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="create-project">
+
+    <div id="create-task" class="ui-block animated fadeInRight">
+        <div class="container">
+
+        <div class="sub-block">
+        <h3>new task</h3>
+
+        <div class="input-group">
+            <label for="task-description">description</label>
+            <textarea id="task-description" rows="3" placeholder="enter task description" required></textarea>
+        </div>
+
+        <div class="input-group">
+            <label for="project-deadline-d">from</label>
+            <div class="date">
+            <input type="text" class="day" id="project-deadline-d" placeholder="dd" required>
+            <input type="text" class="month" id="project-deadline-m" placeholder="mm" required>
+            <input type="text" class="year" id="project-deadline-y" placeholder="yyyy" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="project-deadline-d">to</label>
+            <div class="date">
+            <input type="text" class="day" id="project-deadline-d" placeholder="dd" required>
+            <input type="text" class="month" id="project-deadline-m" placeholder="mm" required>
+            <input type="text" class="year" id="project-deadline-y" placeholder="yyyy" required>
+            </div>
+        </div>
+        </div>
+
+        <div class="sub-block">
+        <div class="add-members">
+        <div class="wrapper-input">
+        <input type="text" class="form-control" placeholder="search" ng-model="searchText.name">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        </div>
+
+        <div class="accounts-list">
+            <div class="member" ng-repeat="account in accounts | filter:searchText">
+            <img src="img/{{account.pic}}"/>
+            <span>{{account.name}}</span>
+            <small>{{account.email}}</small>
+            <a ng-click="addMember($index);">add</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="input-group">
+            <label for="project-description">members</label>
+            <div class="accounts-list">
+                <div class="member" ng-repeat="account in members">
+                <img src="img/{{account.pic}}"/>
+                <span>{{account.name}}</span>
+                <small>{{account.email}}</small>
+                <a ng-click="addMember($index);">add</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="buttons-progress">
+            <a class="next" href="#project">done</a>
+        </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>

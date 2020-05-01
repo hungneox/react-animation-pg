@@ -1,0 +1,46 @@
+/* Reset default font */
+* {
+    font-family: $fonts-base;
+    font-weight: 400;
+    font-size:   1em;
+}
+
+html, body {
+    background-color: $color-background;
+    color: $color-text;
+    //height: 100%;
+}
+
+#view {
+    margin-top: 64px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.container {
+    padding: 48px;
+}
+
+.profile-block {
+    width: 260px;
+    position: fixed;
+    z-index: 400;
+}
+
+.projects-block {
+    margin-left: 260px + 64px;
+    z-index: 300;
+}
+
+.create-project {
+    display: block;
+    width: 400px;
+    z-index: 400;
+    margin: 0 auto;
+}
